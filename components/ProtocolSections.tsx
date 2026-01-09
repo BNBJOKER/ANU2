@@ -8,21 +8,24 @@ const features = [
     subtitle: "2.4% Daily Linear Burn",
     desc: "A built-in self-purification algorithm physically reduces total supply by 2.4% daily. We march inevitably towards the Golden Anchor of 21,000 tokens.",
     icon: <Icons.History className="w-6 h-6" />,
-    color: "from-orange-100 to-orange-50"
+    // REPLACE WITH YOUR OWN PNG URL
+    illustration: "https://placehold.co/400x400/orange/white.png?text=Burn+Graphic", 
   },
   {
     title: "Liquidity Blackhole",
     subtitle: "5% LP Incineration",
     desc: "The protocol burns 5% of the Liquidity Pool daily. This constant pressure raises the floor price, creating a mathematical wall of value.",
     icon: <Icons.Flame className="w-6 h-6" />,
-    color: "from-red-100 to-red-50"
+    // REPLACE WITH YOUR OWN PNG URL
+    illustration: "https://placehold.co/400x400/red/white.png?text=Blackhole", 
   },
   {
     title: "Holder Resonance",
     subtitle: "3% Static Reflection",
     desc: "Hold ≥ 21 ANU to become a consensus node. 3% of the value generated from the LP burn is reflected back to the elite holders automatically.",
     icon: <Icons.Landmark className="w-6 h-6" />,
-    color: "from-yellow-100 to-yellow-50"
+    // REPLACE WITH YOUR OWN PNG URL
+    illustration: "https://placehold.co/400x400/yellow/white.png?text=Rewards", 
   }
 ];
 
@@ -54,7 +57,17 @@ const ProtocolSections: React.FC = () => {
               transition={{ delay: idx * 0.2 }}
               className={`relative overflow-hidden group p-8 rounded-2xl bg-white border border-anu-gold/10 hover:border-anu-gold/40 transition-all hover:shadow-2xl`}
             >
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${feature.color} opacity-50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110`} />
+              {/* 
+                  Background Illustration Layer 
+                  - Positioned top-right
+                  - object-contain + w-auto + h-auto ensures it respects the PNG's natural shape
+                  - max-w/max-h ensures it doesn't overwhelm the text
+              */}
+              <img 
+                src={feature.illustration} 
+                alt="" 
+                className="absolute top-0 right-0 w-auto h-auto max-w-[60%] max-h-[80%] object-contain opacity-10 pointer-events-none group-hover:scale-110 group-hover:opacity-20 transition-all duration-700 origin-top-right"
+              />
               
               <div className="relative z-10">
                 <div className="w-12 h-12 bg-anu-stone text-anu-lightGold flex items-center justify-center rounded-lg mb-6 shadow-lg">
