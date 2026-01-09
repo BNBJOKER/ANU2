@@ -9,7 +9,7 @@ const features = [
     desc: "A built-in self-purification algorithm physically reduces total supply by 2.4% daily. We march inevitably towards the Golden Anchor of 21,000 tokens.",
     icon: <Icons.History className="w-6 h-6" />,
     // REPLACE WITH YOUR OWN PNG URL
-    illustration: "https://placehold.co/400x400/orange/white.png?text=Burn+Graphic", 
+    illustration: "/images/01.png", 
   },
   {
     title: "Liquidity Blackhole",
@@ -17,7 +17,7 @@ const features = [
     desc: "The protocol burns 5% of the Liquidity Pool daily. This constant pressure raises the floor price, creating a mathematical wall of value.",
     icon: <Icons.Flame className="w-6 h-6" />,
     // REPLACE WITH YOUR OWN PNG URL
-    illustration: "https://placehold.co/400x400/red/white.png?text=Blackhole", 
+    illustration: "/images/02.png", 
   },
   {
     title: "Holder Resonance",
@@ -25,7 +25,7 @@ const features = [
     desc: "Hold ≥ 21 ANU to become a consensus node. 3% of the value generated from the LP burn is reflected back to the elite holders automatically.",
     icon: <Icons.Landmark className="w-6 h-6" />,
     // REPLACE WITH YOUR OWN PNG URL
-    illustration: "https://placehold.co/400x400/yellow/white.png?text=Rewards", 
+    illustration: "/images/03.png", 
   }
 ];
 
