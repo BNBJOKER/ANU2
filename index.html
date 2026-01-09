@@ -3,101 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anu Protocol | The Genesis</title>
+    <title>Anu Protocol | The Sovereign Contract</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Marcellus&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              myth: {
-                gold: '#D4AF37',       // Sacred Gold
-                goldDim: '#8A6E2F',    // Antique Gold
-                lapis: '#1e3a8a',      // Lapis Lazuli (Blue - Standard)
-                dark: '#020617',       // Royal Midnight (Very Dark Blue, not Black)
-                stone: '#0F172A',      // Slate/Stone Blue
-                accent: '#2DD4BF',     // Turquoise
-              }
-            },
             fontFamily: {
-              sans: ['Crimson Text', 'serif'],
-              display: ['Cinzel', 'serif'],
-              inscription: ['Marcellus', 'serif'],
+              serif: ['Cinzel', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              anu: {
+                gold: '#D4AF37',
+                lightGold: '#F3E5AB',
+                darkGold: '#AA8C2C',
+                white: '#F9F7F2',
+                stone: '#1C1917',
+                sand: '#E6E2D3'
+              }
             },
             backgroundImage: {
-              'papyrus': "url('https://www.transparenttextures.com/patterns/black-scales.png')", // Subtle texture
               'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              'gold-gradient': 'linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)',
-            },
-            boxShadow: {
-              'glow': '0 0 20px rgba(212, 175, 55, 0.15)',
-              'glow-strong': '0 0 30px rgba(212, 175, 55, 0.3)',
-              'inscription': 'inset 0 2px 4px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.05)',
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'shimmer': 'shimmer 3s linear infinite',
-              'pulse-gold': 'pulse-gold 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              shimmer: {
-                '0%': { backgroundPosition: '-200% 0' },
-                '100%': { backgroundPosition: '200% 0' },
-              },
-              'pulse-gold': {
-                '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(212, 175, 55, 0.2)' },
-                '50%': { opacity: '.8', boxShadow: '0 0 40px rgba(212, 175, 55, 0.4)' },
-              }
+              'mythic-glow': 'conic-gradient(from 180deg at 50% 50%, #F9F7F2 0deg, #F3E5AB 180deg, #F9F7F2 360deg)',
             }
-          }
-        }
+          },
+        },
       }
     </script>
+    <!-- Cinzel for headings (Egyptian/Mythic vibe), Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
       body {
-        background-color: #020617; /* Royal Midnight Base */
-        color: #E5E5E5;
+        background-color: #F9F7F2;
+        color: #1C1917;
+        font-family: 'Inter', sans-serif;
         overflow-x: hidden;
       }
-      
-      /* Subtle Texture Overlay - Lightened slightly for blue background */
-      .bg-texture {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a8a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cinzel', serif;
       }
-
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #020617;
-        border-left: 1px solid #1e293b;
+        background: #E6E2D3;
       }
       ::-webkit-scrollbar-thumb {
-        background: #1e293b;
-        border: 1px solid #D4AF37;
+        background: #D4AF37;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #D4AF37;
-      }
-
-      ::selection {
-        background: #D4AF37;
-        color: #020617;
-      }
-      
-      .text-gold-gradient {
-        background: linear-gradient(to bottom, #FCF6BA, #BF953F);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: #AA8C2C;
       }
     </style>
   <script type="importmap">
@@ -107,9 +67,7 @@
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.25.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0"
+    "framer-motion": "https://esm.sh/framer-motion@^12.25.0"
   }
 }
 </script>

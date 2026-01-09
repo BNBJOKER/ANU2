@@ -1,70 +1,77 @@
-import { FAQItem, RoadmapPhase } from "./types";
+import React from 'react';
+import { FAQItem, RoadmapPhase } from './types';
 
 export const SOCIAL_LINKS = {
   twitter: "https://x.com/ANU200913",
   telegram: "https://t.me/Anu_Protocol"
 };
 
-export const FAQ_DATA: FAQItem[] = [
-  // Mechanism
+export const ROADMAP_DATA: RoadmapPhase[] = [
   {
-    category: 'Mechanism',
-    question: "Why is the total supply set to 200,913?",
-    answer: "This is a tribute number. January 3, 2009, is the day the Bitcoin Genesis Block was mined. We use this epoch-making 'time code' as the initial supply of ANU, aiming to inherit Satoshi's decentralized will and build a truly sovereign and independent value network."
+    phase: "Phase I: GENESIS",
+    title: "Protocol Activation",
+    description: "200,913 Protocol Launch. Activation of the Auto-Burn Contract. Establishing the initial community consensus."
   },
   {
-    category: 'Mechanism',
-    question: "How is the 2.4% daily auto-burn executed?",
-    answer: "The burn logic is driven by smart contract code without human intervention. The protocol automatically deducts <span class='text-anu-yellow font-bold'>2.4%</span> from the total supply daily and sends it to the black hole address. This extreme deflation means your percentage of ANU in the total pool passively increases over time."
+    phase: "Phase II: RESONANCE",
+    title: "Extreme Scarcity",
+    description: "As supply rapidly decreases, the 'Early Bird Equity' dividend system is activated for holders."
   },
   {
-    category: 'Mechanism',
-    question: "How does the daily 5% LP burn affect the price?",
-    answer: "Liquidity Pool (LP) burning is the core price support mechanism of Anu Protocol. By destroying <span class='text-anu-yellow font-bold'>5%</span> of the liquidity pool daily, it effectively increases the value density per coin. It not only suppresses selling pressure but also continuously raises the floor price, forming a 'deflation + price increase' dual-drive mode."
-  },
-  // Rewards
-  {
-    category: 'Rewards',
-    question: "How do I get the 3% LP burn dividends?",
-    answer: "ANU encourages long-term community builders. As long as your personal address holds <span class='text-anu-yellow font-bold'>≥ 21 ANU</span>, the system automatically recognizes your qualification. You will enjoy <span class='text-anu-yellow font-bold'>3%</span> value dividends from the LP burn in real-time.<br/><br/><span class='italic text-gray-400'>Note: 21 is a tribute to Bitcoin's 21 million total supply, and also the golden key to ANU wealth.</span>"
-  },
-  {
-    category: 'Rewards',
-    question: "What is the 'Ecosystem Early Bird Equity'?",
-    answer: "ANU is not just a token; it is the mother coin of the entire Anu ecosystem. Future decentralized applications (DApps), cross-chain protocols, and infrastructure we plan will issue original stock dividends or airdrops to ANU holders. Holding ANU is equivalent to holding original shares of the entire protocol development."
-  },
-  {
-    category: 'Rewards',
-    question: "Are there any trading restrictions? (e.g., lock-ups or cooldowns)",
-    answer: "There are no invisible limits. Anu Protocol follows the principle of <span class='text-anu-yellow font-bold'>'Absolute Freedom'</span>. No forced binding, no exit barriers. We believe true consensus is built on free will, allowing users to buy and sell freely according to their own financial needs."
-  },
-  // Security
-  {
-    category: 'Security',
-    question: "How is contract security and decentralization ensured?",
-    answer: "Anu Protocol's contract logic is set to be immutable from the start. All burn and dividend rules are automatically executed by code, realizing 'Code is Law'. No centralized institution can interfere with the operation of the protocol."
-  },
-  {
-    category: 'Security',
-    question: "What happens after deflation reaches 21,000?",
-    answer: "When the total supply deflates to <span class='text-anu-yellow font-bold'>21,000</span>, ANU will reach its logical 'absolute scarcity state'. At that time, the protocol will enter a completely stable operation period, relying on extremely low total volume to support huge ecological application value, becoming one of the most precious value carriers in the decentralized world."
+    phase: "Phase III: ORDER",
+    title: "Infrastructure",
+    description: "ANU becomes the core medium for cross-chain value transfer and the foundation of the sovereign ecosystem."
   }
 ];
 
-export const ROADMAP_DATA: RoadmapPhase[] = [
+export const FAQ_DATA: FAQItem[] = [
   {
-    phase: "Phase 1: Genesis",
-    keyword: "200,913 Protocol Launch",
-    description: "Activate self-burning contract, start community consensus building."
+    category: "Mechanism & Logic",
+    question: "Why is the total supply 200,913?",
+    answer: <>
+      It is a tribute. On <span className="font-bold text-anu-darkGold">January 3, 2009</span>, the Genesis Block of Bitcoin was mined. We use this time-code as our initial supply to honor the will of decentralization.
+    </>
   },
   {
-    phase: "Phase 2: Resonance",
-    keyword: "Extreme Scarcity Manifests",
-    description: "As supply drops rapidly, activate ecosystem early bird dividend plan."
+    category: "Mechanism & Logic",
+    question: "How does the 2.4% Daily Auto-Burn work?",
+    answer: <>
+      The burn is hard-coded into the smart contract. Every day, <span className="font-bold text-anu-darkGold">2.4%</span> of the total supply is mathematically removed. This is a physical reduction in supply, increasing the value density of every remaining token.
+    </>
   },
   {
-    phase: "Phase 3: Order",
-    keyword: "Ecosystem Infrastructure",
-    description: "ANU becomes the core medium for cross-chain and value flow in the decentralized world."
+    category: "Mechanism & Logic",
+    question: "How does the 5% Liquidity Burn affect price?",
+    answer: <>
+      By burning <span className="font-bold text-anu-darkGold">5%</span> of the Liquidity Pool daily, we permanently raise the price floor. It builds a mathematical wall against downside volatility.
+    </>
+  },
+  {
+    category: "Rewards",
+    question: "How do I get the 3% Dividend?",
+    answer: <>
+      Hold <span className="font-bold text-anu-darkGold">≥ 21 ANU</span>. You are not just a holder; you are a node. The protocol automatically routes 3% of the burn value to eligible wallets.
+    </>
+  },
+  {
+    category: "Rewards",
+    question: "What is 'Early Bird Equity'?",
+    answer: <>
+      ANU is the governance mother-token. Holders receive "original shares" (airdrops/whitelist) for all future DApps and infrastructure built on the Anu Protocol.
+    </>
+  },
+  {
+    category: "Security",
+    question: "Is the contract safe?",
+    answer: <>
+      <span className="font-bold text-anu-darkGold">Code is Law.</span> The contract is immutable. No central authority can freeze assets or alter the burn rate.
+    </>
+  },
+  {
+    category: "Security",
+    question: "What happens at 21,000 supply?",
+    answer: <>
+      The burn stops. The protocol enters the "Absolute Scarcity" era, becoming a stable, ultra-scarce store of value for the ecosystem.
+    </>
   }
 ];

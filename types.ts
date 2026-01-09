@@ -1,25 +1,20 @@
-import { LucideIcon } from "lucide-react";
-
-export interface NavItem {
-  label: string;
-  href: string;
-}
+import { ReactNode } from 'react';
 
 export interface FAQItem {
   question: string;
-  answer: string;
-  category: 'Mechanism' | 'Rewards' | 'Security';
+  answer: ReactNode;
+  category: string;
 }
 
 export interface RoadmapPhase {
   phase: string;
-  keyword: string;
+  title: string;
   description: string;
 }
 
-export interface FeatureCardProps {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  highlight?: string;
+export interface StatItem {
+  label: string;
+  value: string | number;
+  subValue?: string;
+  isCurrency?: boolean;
 }
